@@ -19,3 +19,13 @@ figcaption {
   font-size: 1.2rem;
   color: $color-secondary;
 }
+
+.icons-grid {
+  [class*="col-"] {
+    text-align: center;
+    border-right: solid 1px black;
+    &:first-child {
+      border-left: solid 1px black;
+    }
+  }
+}
