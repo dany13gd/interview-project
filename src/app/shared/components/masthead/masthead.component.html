@@ -1,0 +1,14 @@
+<section
+  class="img-container"
+  [ngStyle]="{ 'background-image': 'url(' + bgImage + ')' }"
+>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 text-center" [hidden]="hideText">
+        <h1>{{ title }}</h1>
+        <h2 *ngIf="subTitle">{{ subTitle }}</h2>
+      </div>
+    </div>
+    <ng-content></ng-content>
+  </div>
+</section>
