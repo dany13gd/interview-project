@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { MastheadComponent } from './components/masthead/masthead.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ContentImageComponent } from './components/content-image/content-image.component';
+import { PhoneComponent } from './components/phone/phone.component';
 
 @NgModule({
   declarations: [
@@ -12,6 +13,7 @@ import { ContentImageComponent } from './components/content-image/content-image.
     MastheadComponent,
     FooterComponent,
     ContentImageComponent,
+    PhoneComponent,
   ],
   imports: [CommonModule, RouterModule],
   exports: [
@@ -19,6 +21,7 @@ import { ContentImageComponent } from './components/content-image/content-image.
     FooterComponent,
     MastheadComponent,
     ContentImageComponent,
+    PhoneComponent,
   ],
 })
 export class SharedModule {}
