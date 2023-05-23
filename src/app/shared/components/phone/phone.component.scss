@@ -1,0 +1,37 @@
+@import "../../../../assets/styles/variables.scss";
+.phone-icon {
+  color: $color-secondary;
+  font-weight: 600;
+  &:hover {
+    color: $color-secondary-dark;
+  }
+  &.inverted {
+    color: white;
+    span {
+      background-position-y: -70px;
+    }
+  }
+  span {
+    display: inline-block;
+    background: -210px -12px url("../../../../assets/images/icons/sprite.png") no-repeat;
+    height: 25px;
+    width: 25px;
+    position: relative;
+    top: 4px;
+  }
+  &.xs {
+    font-size: 0.5rem;
+  }
+  &.sm {
+    font-size: 0.75rem;
+  }
+  &.md {
+    font-size: 1rem;
+  }
+  &.lg {
+    font-size: 1.56rem;
+  }
+  &.xl {
+    font-size: 2rem;
+  }
+}
