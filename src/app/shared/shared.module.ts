@@ -8,6 +8,29 @@ import { ContentImageComponent } from './components/content-image/content-image.
 import { PhoneComponent } from './components/phone/phone.component';
 import { SocialLinksComponent } from './components/social-links/social-links.component';
 import { MatIconModule } from '@angular/material/icon';
+import {
+  calendar3,
+  geoAltFill,
+  watch,
+  NgxBootstrapIconsModule,
+  starFill,
+  chevronLeft,
+  chevronRight,
+  chevronDown,
+  chevronUp,
+  list,
+} from 'ngx-bootstrap-icons';
+const icons = {
+  geoAltFill,
+  calendar3,
+  watch,
+  starFill,
+  chevronLeft,
+  chevronRight,
+  chevronDown,
+  chevronUp,
+  list,
+};
 
 @NgModule({
   declarations: [
@@ -18,7 +41,12 @@ import { MatIconModule } from '@angular/material/icon';
     PhoneComponent,
     SocialLinksComponent,
   ],
-  imports: [CommonModule, RouterModule, MatIconModule],
+  imports: [
+    CommonModule,
+    RouterModule,
+    MatIconModule,
+    NgxBootstrapIconsModule.pick(icons),
+  ],
   exports: [
     HeaderComponent,
     FooterComponent,

@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
+  public logo: string = '../../../../assets/images/Logo-interview.png';
   public btnUrl: string = '/devis';
   public btnLabel: string = 'Demandez un Devis';
   public openMenu = false;

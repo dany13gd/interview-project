@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 export class HomeComponent {
   constructor(private router: Router) {}
   public mhImage: string =
-    'https://toura-croatie-cms-asset-upload.s3.eu-west-3.amazonaws.com/location_voiture_croatie_6f01f248ec.jpg';
+    'https://toura-croatie-cms-asset-upload.s3.eu-west-3.amazonaws.com/Croatie_Header_Pagespng_01_1fe81b2aa0.jpg';
   public link: string = '/devis';
   public buttonText: string = 'Réserver en ligne';
   public title: string =
