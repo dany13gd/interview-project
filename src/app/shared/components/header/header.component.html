@@ -1,0 +1,60 @@
+<header>
+  <div class="container pt-0 pt-lg-1">
+    <div class="row text-center text-lg-start">
+      <div class="col-12 col-lg-3 align-self-center">
+        <a href="/">
+          <img
+            srcset="
+              https://toura-croatie-cms-asset-upload.s3.eu-west-3.amazonaws.com/logo_tour_a_croatie_d736728ddb.png
+            "
+            alt=""
+            width="300"
+            height="80"
+          />
+        </a>
+      </div>
+      <div class="col-12 col-lg-9">
+        <div
+          class="row justify-content-center justify-content-lg-end align-items-center mb-3 mb-lg-3"
+        >
+          <div class="col-auto mb-3 mb-lg-0">
+            <!-- <app-social-links></app-social-links> -->
+            app-social-links
+          </div>
+          <div class="col-auto mb-3 mb-lg-0 py-3">
+            <!-- <app-phone-component></app-phone-component> -->
+            app-phone-component
+          </div>
+          <div class="col-auto">
+            <a class="btn btn-primary btn-rounded" [routerLink]="btnUrl">{{
+              btnLabel
+            }}</a>
+          </div>
+        </div>
+        <div class="row justify-content-end">
+          <div class="col-12 col-xl-auto">
+            <nav>
+              <button
+                (click)="toggleNav()"
+                class="nav-toggler"
+                type="button"
+                aria-label="Toggle navigation"
+              >
+                <!-- <i-bs name="list"></i-bs> -->
+              </button>
+              <ul class="list-inline mb-3" [class.open]="openMenu">
+                <ng-container *ngIf="menuItems">
+                  <li class="list-inline-item" *ngFor="let item of menuItems">
+                    <a [routerLink]="item.path" (click)="openMenu = false">{{
+                      item.title
+                    }}</a>
+                  </li>
+                </ng-container>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
