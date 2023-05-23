@@ -1,0 +1,100 @@
+@import "../../../../assets/styles/variables.scss";
+
+header {
+  background-color: $color-secondary-light;
+}
+
+.btn-rounded {
+  font-size: 0.9rem;
+  padding: 0.375rem 1.2rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+nav {
+  ul {
+    margin: 0;
+    overflow: hidden;
+  }
+  ul,
+  li {
+    height: 0;
+    transition: all 0.25s;
+  }
+  .open,
+  .open li {
+    height: auto;
+  }
+  .open {
+    margin-bottom: 1rem;
+    li {
+      display: list-item;
+      text-align: right;
+      margin-right: 0;
+    }
+    a {
+      margin: 0;
+      padding: 0.3rem 0;
+      width: 100%;
+      border-bottom: solid 1px #999;
+    }
+  }
+  a {
+    margin: 0 20px;
+    font-weight: 700;
+    // color: white;
+    transition: all 0.3s;
+    text-decoration: none;
+  }
+
+  a:hover {
+    opacity: 0.3;
+    color: $color-highlight;
+    text-decoration: underline $color-highlight;
+  }
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-toggler {
+  border: solid 1px #999;
+  border-radius: 4px;
+  padding: 4px 10px 5px;
+  background: #fff;
+  margin: 0 0 1rem auto;
+}
+
+@media screen and (min-width: 1200px) {
+  nav {
+    .nav-toggler {
+      display: none;
+    }
+    ul {
+      overflow: auto;
+      margin-bottom: 0.5rem;
+    }
+    ul,
+    li {
+      height: auto;
+    }
+
+    .open {
+      li {
+        display: inline-block;
+      }
+      a {
+        margin: 0 20px;
+        padding: 0;
+        width: auto;
+        border: none;
+      }
+    }
+  }
+}
+
+// TODO: close menu on change location
