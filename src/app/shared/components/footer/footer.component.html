@@ -1,0 +1,60 @@
+<div class="footer-container">
+  <div class="row text-center text-lg-start">
+    <div class="col-12 col-lg-3">
+      <a href="/">
+        <img
+          loading="lazy"
+          [srcset]="logoImage"
+          width="270"
+          height="80"
+          class="img-fluid m-sm-4"
+        />
+      </a>
+    </div>
+    <div class="col-12 col-lg-3 mt-4">
+      <div class="ms-0 ms-lg-4">
+        <h4 class="mb-4 text-uppercase">Contact</h4>
+        <ul class="list-unstyled">
+          <li>
+            <!-- <app-phone-component
+              [inverted]="true"
+              size="md"
+            ></app-phone-component> -->
+            app-phone-component
+          </li>
+          <li>
+            <a href="mailto:info@touraislande.com">info@touraislande.com</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-12 col-lg-3 border border-top-0 border-bottom-0 mt-3 mb-3">
+      <div class="ms-0 ms-lg-4">
+        <h4 class="mb-4 text-uppercase">Liens</h4>
+        <div class="row">
+          <div class="col-6">
+            <ul class="list-unstyled" *ngIf="menuItems">
+              <li *ngFor="let item of menuItems | slice : 0 : 3">
+                <a [routerLink]="item.path">{{ item.title }}</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-6">
+            <ul class="list-unstyled" *ngIf="menuItems">
+              <li *ngFor="let item of menuItems | slice : 3">
+                <a [routerLink]="item.path">{{ item.title }}</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-lg-3 mt-4">
+      <div class="ms-0 ms-lg-4">
+        <h4 class="mb-4 text-uppercase">Suivez-nous</h4>
+        <!-- <app-social-links [inverted]="true"></app-social-links> -->
+        app-social-links
+      </div>
+    </div>
+  </div>
+</div>
