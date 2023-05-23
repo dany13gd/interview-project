@@ -1,0 +1,179 @@
+<app-masthead [bgImage]="mhImage">
+  <div class="row pb-5 justify-content-center">
+    <div class="col-12 col-lg-9">
+      <!-- <app-search-form
+        (searchResultsSaved)="gotoVechicleList()"
+      ></app-search-form> -->
+      app-search-form
+    </div>
+  </div>
+</app-masthead>
+<section class="bg-color-odd py-5">
+  <div class="container">
+    <div class="row">
+      <h2 class="col-12 pb-3 d-flex justify-content-center">{{ title }}</h2>
+      <p class="col-12 d-flex justify-content-center">{{ content }}</p>
+      <p class="col-12 d-flex justify-content-center">{{ content2 }}</p>
+    </div>
+  </div>
+</section>
+
+<app-content-image>
+  <h2 class="fw-bold">{{ firstSectionTitle }}</h2>
+  <p [innerText]="firstContent1"></p>
+  <p [innerText]="firstContent2"></p>
+  <a
+    class="btn btn-secondary text-uppercase fw-bold rounded-5"
+    [routerLink]="link"
+    >{{ buttonText }}</a
+  >
+  <div class="row mb-3" visual>
+    <div class="col-6">
+      <img
+        loading="lazy"
+        [src]="firstUrl"
+        [alt]=""
+        [width]="firstWidth"
+        [height]="firstHeight"
+        class="img-fluid border border-bottom-0 border-top-0 border-start-0"
+      />
+    </div>
+    <div class="col-6">
+      <h3>Volkswagen</h3>
+      <p>Modèle : Gol</p>
+      <p class="py-4">/</p>
+      <a class="link" href="/assurances">Toutes Assurances ➞</a>
+    </div>
+  </div>
+  <div class="row" visual>
+    <div class="col-6">
+      <img
+        loading="lazy"
+        src="https://touracancun.com/wp-content/uploads/2019/09/renault-duster.jpg"
+        [alt]=""
+        [width]="firstWidth"
+        [height]="firstHeight"
+        class="img-fluid border border-bottom-0 border-top-0 border-start-0"
+      />
+    </div>
+    <div class="col-6">
+      <h3>Renault</h3>
+      <p>Modèle : Duster</p>
+      <p class="py-4">/</p>
+      <a class="link" href="/assurances">Toutes Assurances ➞</a>
+    </div>
+  </div>
+</app-content-image>
+
+<section>
+  <div class="container py-5 text-center">
+    <h2>
+      Location de voiture au Mexique avec TouraCancun : de nombreux avantages!
+    </h2>
+    <p class="mb-5 mt-1">
+      TouraCancun est la seule entreprise de location de véhicules au Mexique à
+      vous offrir autant <a href="/avantages">d'avantages.</a>
+    </p>
+    <p>
+      Que vous souhaitiez passer quelques jours, ou quelques semaines, nos
+      offres de location s'adaptent à vos besoins. N'attendez plus pour réserver
+      la location de votre voiture à Cancún!
+    </p>
+    <ng-container *ngIf="gridIcons">
+      <div class="row mt-5">
+        <div
+          class="col-6 col-md-3"
+          *ngFor="let item of gridIcons | slice : 0 : 4"
+        >
+          <figure>
+            <img
+              loading="lazy"
+              class="img-fluid"
+              [src]="item.path"
+              [alt]=""
+              [width]=""
+              [height]=""
+            />
+            <figcaption>{{ item.title }}</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="row">
+        <div
+          class="col-6 col-md-3 pt-5"
+          *ngFor="let item of gridIcons | slice : 4 : 8"
+        >
+          <figure>
+            <img
+              loading="lazy"
+              class="img-fluid"
+              [src]="item.path"
+              [alt]=""
+              [width]=""
+              [height]=""
+            />
+            <figcaption>{{ item.title }}</figcaption>
+          </figure>
+        </div>
+      </div>
+      <a
+        class="btn btn-outline text-uppercase fw-bold rounded-5 py-3 mt-5"
+        [routerLink]="link"
+        >En savoir plus</a
+      >
+    </ng-container>
+  </div>
+</section>
+<section>
+  <div class="row mt-3">
+    <div class="col-xl-6">
+      <img
+        loading="lazy"
+        visual
+        src="https://touracancun.com/wp-content/uploads/2019/09/assurance-comprises.jpg"
+        class="img-fluid rounded-3"
+        [alt]=""
+        [width]=""
+        [height]=""
+      />
+    </div>
+    <div class="col-xl-6 mt-5">
+      <h2 class="fw-bold">
+        Chez TouraCancun, toutes les assurances sont comprises dans nos prix
+      </h2>
+      <p class="mt-5">
+        Contrairement à la plupart de nos compétiteurs, chez TouraCancun, nous
+        incluons toujours le prix des
+        <a href="/assurances">polices d'assurance</a> dans nos tarifs de
+        location. Cela vous permet de profiter d'une protection complète, sans
+        avoir à débourser de montant supplémentaire au moment où vous prendrez
+        possession du véhicule.
+      </p>
+      <p>Cette police d'assurance couvre une foule de points :</p>
+      <ul class="fw-bold">
+        <li>&#x2713; Collision</li>
+        <li>&#x2713; Vol du véhicule</li>
+        <li>&#x2713; Bris de glace et pneumatiques</li>
+        <li>&#x2713; Et bien d'autres</li>
+      </ul>
+      <p class="mt-4">
+        De plus, en cas de problème, vous profiterez gratuitement d'un service
+        de dépannage ou de remorquage ainsi que d'une assistance francophone 24
+        heures sur 24.
+      </p>
+      <div class="col-12">
+        <a
+          class="btn btn-outline text-uppercase fw-bold rounded-5 py-3 mt-5 m-3"
+          [routerLink]="link"
+          >En savoir plus</a
+        >
+        <a
+          class="btn btn-secondary text-uppercase fw-bold rounded-5 py-3 mt-5 m-3"
+          [routerLink]="link"
+          >Réservez maintenant</a
+        >
+      </div>
+    </div>
+  </div>
+</section>
