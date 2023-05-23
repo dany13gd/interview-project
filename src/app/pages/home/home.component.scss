@@ -1,0 +1,21 @@
+@import "../../../assets/styles/variables.scss";
+
+a {
+  background-color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.img-fluid {
+  border-width: 3px !important;
+  border-color: $color-secondary !important;
+}
+li {
+  list-style: none;
+}
+
+figcaption {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: $color-secondary;
+}
