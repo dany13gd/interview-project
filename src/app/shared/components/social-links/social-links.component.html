@@ -1,0 +1,7 @@
+<ul class="list-inline" [class.inverted]="inverted" *ngIf="list">
+  <li class="list-inline-item" *ngFor="let item of list">
+    <a [href]="item.url" target="_blank" rel="noopener noreferrer"
+      ><span [class]="item.icon"></span
+    ></a>
+  </li>
+</ul>

@@ -1,0 +1,67 @@
+@import "../../../../assets/styles/variables";
+
+ul {
+  margin: 0;
+}
+a {
+  .facebook {
+    display: inline-block;
+    background: -139px 1px url("../../../../assets/images/icons/sprite.png")
+      no-repeat;
+    position: relative;
+    height: 50px;
+    width: 50px;
+    font-size: 50px;
+    background-color: white;
+    transition: all 0.5s ease;
+    border-radius: 50%;
+    &:hover {
+      background: -139px -59px url("../../../../assets/images/icons/sprite.png")
+        no-repeat;
+      background-color: blue;
+    }
+  }
+}
+.inverted {
+  .facebook {
+    display: inline-block;
+    background: -139px -59px url("../../../../assets/images/icons/sprite.png") no-repeat;
+    background-color: blue;
+    &:hover {
+      background: -139px 1px url("../../../../assets/images/icons/sprite.png");
+      background-color: white;
+    }
+  }
+
+  a {
+    .linkedin {
+      display: inline-block;
+      background: -69px 1px url("../../../../assets/images/icons/sprite.png")
+        no-repeat;
+      position: relative;
+      height: 50px;
+      width: 50px;
+      font-size: 50px;
+      background-color: white;
+      transition: all 0.5s ease;
+      border-radius: 50%;
+      &:hover {
+        background: -69px -59px url("../../../../assets/images/icons/sprite.png")
+          no-repeat;
+        background-color: blue;
+      }
+    }
+  }
+  .inverted {
+    .linkedin {
+      display: inline-block;
+      background: -100px -10px url("../../../../assets/images/icons/sprite.png")
+        no-repeat;
+      background-color: blue;
+      &:hover {
+        background: -10px 1px url("../../../../assets/images/icons/sprite.png");
+        background-color: white;
+      }
+    }
+  }
+}
