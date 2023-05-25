@@ -28,7 +28,7 @@ export class PricesComponent implements OnInit {
   public bgImage: string = '../../../assets/images/masthead-prices.webp';
   public mastHeadTitle: string = 'Prices';
   public link: string = '/devis';
-  public buttonText: string = 'Réserver en ligne';
+  public buttonText: string = 'book online';
   public mainTitle: string =
     'Learn How to Compare Your Quote and Avoid the Pitfalls';
   public subtitle: string =
