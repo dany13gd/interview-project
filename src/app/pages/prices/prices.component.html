@@ -1,0 +1,52 @@
+<app-masthead [bgImage]="bgImage" [title]="mastHeadTitle"></app-masthead>
+<section class="container py-5">
+  <div class="row justify-content-center text-center">
+    <h2 class="col-12 col-md-9">
+      {{ mainTitle }}
+    </h2>
+    <p class="col-12 col-md-7 my-4">
+      {{ intro }}
+    </p>
+    <h2 class="col-12 col-md-9">
+      {{ subtitle }}
+    </h2>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-8">
+      <table class="table table-responsive table-striped table-bordered">
+        <caption>
+          tableau de comparaison des prix
+        </caption>
+        <thead>
+          <tr>
+            <th>VW Polo 14 days</th>
+            <th>Loueur / Comparateur X*</th>
+            <th>TouraCancun</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of table">
+            <td>{{ item.days15 }}</td>
+            <td>{{ item.lessorComparator }}</td>
+            <td>{{ item.toura }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="bottom-section bg-color-odd text-center">
+  <div class="container">
+    <div class="row justify-content-center">
+      <p class="col-12 col-md-9 mb-2" [innerHTML]="content"></p>
+    </div>
+    <div class="row justify-content-center mt-5">
+      <div class="col-6 col-md-3">
+        <a [class]="'btn btn-' + 'rounded' + ' w-100'" [routerLink]="link">{{
+          buttonText
+        }}</a>
+      </div>
+    </div>
+  </div>
+</section>

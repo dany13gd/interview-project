@@ -13,7 +13,7 @@ export class HeaderComponent {
   public menuItems: any[] = [
     {
       title: 'Prices',
-      path: '/Prices',
+      path: '/prices',
     },
     {
       title: 'Benefits',
