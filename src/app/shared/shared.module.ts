@@ -8,6 +8,14 @@ import { ContentImageComponent } from './components/content-image/content-image.
 import { PhoneComponent } from './components/phone/phone.component';
 import { SocialLinksComponent } from './components/social-links/social-links.component';
 import { MatIconModule } from '@angular/material/icon';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
+import { MatNativeDateModule } from '@angular/material/core';
+import { ReactiveFormsModule } from '@angular/forms';
+
 import {
   calendar3,
   geoAltFill,
@@ -20,6 +28,7 @@ import {
   chevronUp,
   list,
 } from 'ngx-bootstrap-icons';
+import { SearchFormComponent } from './components/search-form/search-form.component';
 const icons = {
   geoAltFill,
   calendar3,
@@ -40,12 +49,20 @@ const icons = {
     ContentImageComponent,
     PhoneComponent,
     SocialLinksComponent,
+    SearchFormComponent,
   ],
   imports: [
     CommonModule,
     RouterModule,
     MatIconModule,
     NgxBootstrapIconsModule.pick(icons),
+    MatProgressSpinnerModule,
+    MatDatepickerModule,
+    MatInputModule,
+    MatNativeDateModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatSelectModule,
   ],
   exports: [
     HeaderComponent,
@@ -54,6 +71,7 @@ const icons = {
     ContentImageComponent,
     PhoneComponent,
     SocialLinksComponent,
+    SearchFormComponent,
   ],
 })
 export class SharedModule {}

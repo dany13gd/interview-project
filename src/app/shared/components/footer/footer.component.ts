@@ -10,32 +10,21 @@ export class FooterComponent {
     'https://touraislande.com/wp-content/uploads/2019/09/TouraEuro-Logo-e1501914199940-blanc.png';
   public menuItems: any[] = [
     {
-      title: 'Nos Prix',
-      path: '/nos-prix',
+      title: 'Prices',
+      path: '/Prices',
     },
     {
-      title: 'Avantages',
-      path: '/avantages',
+      title: 'Benefits',
+      path: '/benefits',
     },
     {
-      title: 'Assurances',
-      path: '/assurances',
+      title: 'Insurance',
+      path: '/insurance',
     },
-    {
-      title: 'Blog',
-      path: '/',
-    },
-    {
-      title: 'FAQ',
-      path: '/',
-    },
+
     {
       title: 'Contact',
       path: '/contact',
-    },
-    {
-      title: 'Conditions Générales',
-      path: '/conditions-generales',
     },
   ];
 }
