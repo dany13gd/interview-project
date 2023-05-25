@@ -11,7 +11,7 @@ export class HomeComponent {
   public mhImage: string =
     'https://toura-croatie-cms-asset-upload.s3.eu-west-3.amazonaws.com/Croatie_Header_Pagespng_01_1fe81b2aa0.jpg';
   public link: string = '/devis';
-  public buttonText: string = 'Réserver en ligne';
+  public buttonText: string = 'book online';
   public title: string =
     'Agence de location de voiture au Mexique : TouraCancun ';
   public content: string =
