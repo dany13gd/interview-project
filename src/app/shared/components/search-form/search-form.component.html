@@ -1,0 +1,128 @@
+<div class="overlay py-4 px-4 px-lg-5" [class.no-top-spacing]="!topSpacing">
+  <form [formGroup]="searchForm" (ngSubmit)="submitForm()">
+    <div class="row">
+      <div class="col-12 col-lg-6">
+        <mat-form-field class="form">
+          <mat-label>Saisir la succursale de prise en charge</mat-label>
+          <mat-select [disabled]="!enableForm" formControlName="pickUpLocation">
+            <mat-option
+              *ngFor="let location of locations"
+              [value]="location.Id"
+            >
+              {{ location.Name }}
+            </mat-option>
+          </mat-select>
+          <span matPrefix><i-bs name="geo-alt-fill"></i-bs></span>
+        </mat-form-field>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-3 mb-4 mb-lg-0">
+        <mat-form-field>
+          <mat-label>Choisissez une date</mat-label>
+          <input
+            matInput
+            required
+            [matDatepicker]="pickUpDate"
+            [min]="minDate"
+            formControlName="pickUpDate"
+          />
+          <mat-datepicker-toggle
+            matSuffix
+            [for]="pickUpDate"
+          ></mat-datepicker-toggle>
+          <mat-datepicker #pickUpDate></mat-datepicker>
+        </mat-form-field>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-3 mb-4 mb-lg-0">
+        <div class="input-group">
+          <span class="input-group-text">
+            <i-bs name="watch"></i-bs>
+          </span>
+          <select
+            name="heure"
+            id="pickUpTime"
+            formControlName="pickUpTime"
+            class="form-control"
+            placeholder="Heure"
+          >
+            <option value="">Heure</option>
+            <option *ngFor="let item of timeList" [value]="item">
+              {{ item }}
+            </option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-lg-6">
+        <mat-form-field>
+          <mat-label>Saisir la succursale de retour</mat-label>
+          <mat-select [disabled]="!enableForm" formControlName="dropLocation">
+            <mat-option
+              *ngFor="let location of locations"
+              [value]="location.Id"
+            >
+              {{ location.Name }}
+            </mat-option>
+          </mat-select>
+          <span matPrefix><i-bs name="geo-alt-fill"></i-bs></span>
+        </mat-form-field>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-3 mb-4 mb-lg-0">
+        <mat-form-field>
+          <mat-label>Choisissez une date</mat-label>
+          <input
+            matInput
+            required
+            [matDatepicker]="dropDate"
+            [min]="searchForm.get('pickUpDate')?.value"
+            [disabled]="!searchForm.get('pickUpDate')?.value"
+            formControlName="dropDate"
+          />
+          <mat-datepicker-toggle
+            matSuffix
+            [for]="dropDate"
+          ></mat-datepicker-toggle>
+          <mat-datepicker #dropDate></mat-datepicker>
+        </mat-form-field>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-3 mb-4 mb-lg-0">
+        <div class="input-group">
+          <span class="input-group-text">
+            <i-bs name="watch"></i-bs>
+          </span>
+          <select
+            name="heure"
+            id="dropTime"
+            formControlName="dropTime"
+            class="form-control"
+            placeholder="Heure"
+          >
+            <option value="">Heure</option>
+            <option *ngFor="let item of timeList" [value]="item">
+              {{ item }}
+            </option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-6 mb-4 mb-lg-0">
+        <button
+          type="submit"
+          class="btn btn-primary w-100"
+          [disabled]="searchForm.invalid"
+        >
+          Demandez un Devis
+        </button>
+      </div>
+    </div>
+  </form>
+  <div class="row justify-content-center mt-1">
+    <mat-spinner *ngIf="activeSpinner" diameter="50"></mat-spinner>
+  </div>
+</div>
