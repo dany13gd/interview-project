@@ -12,36 +12,21 @@ export class HeaderComponent {
   public openMenu = false;
   public menuItems: any[] = [
     {
-      title: 'Nos Prix',
-      path: '/nos-prix',
+      title: 'Prices',
+      path: '/Prices',
     },
     {
-      title: 'Avantages',
-      path: '/avantages',
+      title: 'Benefits',
+      path: '/benefits',
     },
     {
-      title: 'Assurances',
-      path: '/assurances',
+      title: 'Insurance',
+      path: '/insurance',
     },
-    {
-      title: 'Avis Clients',
-      path: '/avis',
-    },
-    {
-      title: 'Blog',
-      path: '/',
-    },
-    {
-      title: 'FAQ',
-      path: '/',
-    },
+
     {
       title: 'Contact',
       path: '/contact',
-    },
-    {
-      title: 'Conditions Générales',
-      path: '/conditions-generales',
     },
   ];
   public toggleNav(): void {
