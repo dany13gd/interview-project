@@ -1,0 +1,25 @@
+@import "../../../assets/styles/variables.scss";
+
+th {
+  font-size: 1.3rem;
+  color: $color-secondary;
+}
+
+.table tr td:nth-child(3) {
+  color: $color-highlight;
+  font-weight: 700;
+}
+
+.bottom-section {
+  background-size: cover;
+  padding: 90px 0 70px;
+  p {
+    font-size: 1.2rem;
+  }
+  a {
+    background-color: $color-highlight;
+  }
+}
+caption {
+  text-indent: -9999px;
+}
