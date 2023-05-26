@@ -21,7 +21,7 @@ export class HeaderComponent {
     },
     {
       title: 'Insurance',
-      path: '/insurance',
+      path: '/insurances',
     },
 
     {

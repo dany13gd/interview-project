@@ -1,0 +1,17 @@
+<article *ngFor="let item of accordionList">
+  <div class="border-top py-5" (click)="toggleClose(item)">
+    <h2 class="display-6 bold">
+      {{ item.title }}
+    </h2>
+    <i-bs
+      *ngIf="displayChevron"
+      [name]="item.closed ? 'chevron-down' : 'chevron-up'"
+    ></i-bs>
+  </div>
+
+  <div
+    class="mb-5"
+    [class.closed]="item.closed"
+    [innerText]="item.content"
+  ></div>
+</article>
