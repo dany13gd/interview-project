@@ -30,6 +30,7 @@ import {
 } from 'ngx-bootstrap-icons';
 import { SearchFormComponent } from './components/search-form/search-form.component';
 import { AccordionComponent } from './components/accordion/accordion.component';
+import { ContactEmailComponent } from './components/contact-email/contact-email.component';
 const icons = {
   geoAltFill,
   calendar3,
@@ -52,6 +53,7 @@ const icons = {
     SocialLinksComponent,
     SearchFormComponent,
     AccordionComponent,
+    ContactEmailComponent,
   ],
   imports: [
     CommonModule,
@@ -75,6 +77,7 @@ const icons = {
     SocialLinksComponent,
     SearchFormComponent,
     AccordionComponent,
+    ContactEmailComponent,
   ],
 })
 export class SharedModule {}
