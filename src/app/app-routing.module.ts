@@ -5,6 +5,7 @@ import { PricesComponent } from './pages/prices/prices.component';
 import { BenefitsComponent } from './pages/benefits/benefits.component';
 import { InsurancesComponent } from './pages/insurances/insurances.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { ReserveComponent } from './pages/reserve/reserve.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -12,6 +13,8 @@ const routes: Routes = [
   { path: 'benefits', component: BenefitsComponent },
   { path: 'insurances', component: InsurancesComponent },
   { path: 'contact', component: ContactComponent },
+  { path: 'reserve', component: ReserveComponent },
+
   { path: '**', redirectTo: '' },
 ];
 

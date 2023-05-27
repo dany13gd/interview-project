@@ -24,7 +24,7 @@
     <p [innerText]="firstContent2"></p>
     <a
       class="btn btn-secondary text-uppercase fw-bold rounded-5"
-      routerLink="/reserver"
+      routerLink="/reserve"
       >{{ buttonText }}</a
     >
     <div class="row mb-3" visual>
@@ -42,7 +42,7 @@
         <h3>Volkswagen</h3>
         <p>Model : Gol</p>
         <p class="py-4">/</p>
-        <a class="link" [href]="link">All Insurances ➞</a>
+        <a class="link" [href]="benefits">All Insurances ➞</a>
       </div>
     </div>
     <div class="row" visual>
@@ -60,7 +60,7 @@
         <h3>Renault</h3>
         <p>Model : Duster</p>
         <p class="py-4">/</p>
-        <a class="link" [href]="link">All Insurances ➞</a>
+        <a class="link" [href]="benefits">All Insurances ➞</a>
       </div>
     </div>
   </app-content-image>
@@ -71,7 +71,7 @@
     <h2>Car rental in Mexico with TouraCancun: many advantages!</h2>
     <p class="mb-5 mt-1">
       TouraCancun is the only vehicle rental company in Mexico to offer you as
-      much <a [href]="link"> of advantages.</a>
+      much <a [href]="benefits"> of advantages.</a>
     </p>
     <p>
       Whether you wish to spend a few days, or a few weeks, our rental offers
@@ -118,7 +118,7 @@
       </div>
       <a
         class="btn btn-outline text-uppercase fw-bold rounded-5 py-3 mt-5"
-        [routerLink]="link"
+        [routerLink]="benefits"
       >
         Learn more</a
       >
@@ -164,12 +164,12 @@
       <div class="col-12">
         <a
           class="btn btn-outline text-uppercase fw-bold rounded-5 py-3 mt-5 m-3"
-          [routerLink]="link"
+          [routerLink]="benefits"
           >Learn more</a
         >
         <a
           class="btn btn-secondary text-uppercase fw-bold rounded-5 py-3 mt-5 m-3"
-          [routerLink]="link"
+          [routerLink]="reserve"
           >Reserve now</a
         >
       </div>

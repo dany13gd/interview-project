@@ -46,17 +46,17 @@ export class SearchFormComponent implements OnInit {
   @Output() searchResultsSaved: EventEmitter<void> = new EventEmitter<void>();
 
   public locations: Location[] = [
-    { Id: 1, Name: 'Aéroport de Cancun' },
-    { Id: 1, Name: 'Aéroport de Colima' },
-    { Id: 1, Name: 'Aéroport de Guadalajara' },
-    { Id: 1, Name: 'Aéroport de la Ciudad de Mexico' },
-    { Id: 1, Name: 'Aéroport de Leon Guanajuato' },
-    { Id: 1, Name: 'Aéroport de Los Cabos' },
-    { Id: 1, Name: 'Aéroport de Manzanillo' },
-    { Id: 1, Name: 'Aéroport de Merida' },
-    { Id: 1, Name: 'Aéroport de Monterrey' },
-    { Id: 1, Name: 'Aéroport de Puerto Vallarta' },
-    { Id: 1, Name: 'Aéroport de Queretaro' },
+    { Id: 1, Name: 'Airport de Cancun' },
+    { Id: 1, Name: 'Airport de Colima' },
+    { Id: 1, Name: 'Airport de Guadalajara' },
+    { Id: 1, Name: 'Airport de la Ciudad de Mexico' },
+    { Id: 1, Name: 'Airport de Leon Guanajuato' },
+    { Id: 1, Name: 'Airport de Los Cabos' },
+    { Id: 1, Name: 'Airport de Manzanillo' },
+    { Id: 1, Name: 'Airport de Merida' },
+    { Id: 1, Name: 'Airport de Monterrey' },
+    { Id: 1, Name: 'Airport de Puerto Vallarta' },
+    { Id: 1, Name: 'Airport de Queretaro' },
   ];
 
   public submitForm(): void {

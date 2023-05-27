@@ -9,7 +9,8 @@ import { Router } from '@angular/router';
 export class HomeComponent {
   constructor(private router: Router) {}
   public mhImage: string = '../../../assets/images/home-masthead.jpg';
-  public link: string = '/benefits';
+  public benefits: string = '/benefits';
+  public reserve: string = '/reserve';
   public buttonText: string = 'book online';
   public title: string = 'Car rental agency in Mexico: TouraCancun';
   public content: string =
