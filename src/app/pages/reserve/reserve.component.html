@@ -1,0 +1,14 @@
+<app-masthead
+  title="Reserve"
+  bgImage="../../../assets/images/home-masthead.jpg"
+  height="600"
+>
+  <div class="row p-2 justify-content-center">
+    <div class="col-12 col-lg-9">
+      <app-search-form [topSpacing]="false" [defaultValues]="true">
+      </app-search-form>
+    </div>
+  </div>
+</app-masthead>
+<div class="container" *ngIf="list"></div>
+<!-- <app-car-list [list]="list"></app-car-list> -->
