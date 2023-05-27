@@ -17,6 +17,7 @@ export class ContactComponent {
     this.createForm();
   }
 
+  public showErrorMessage = false;
   public mhTitle: string = 'Contact';
   public bgImage: string = '../../../assets/images/mhContact-image.jpg';
   public image: string = '../../../assets/images/contact-image.jpg';
@@ -48,8 +49,6 @@ export class ContactComponent {
       ? null
       : this.snackBar.open('different emails, plese check', 'close');
   }
-
-  public showErrorMessage = false;
 
   public submitForm(): void {
     if (this.contactForm.invalid) {

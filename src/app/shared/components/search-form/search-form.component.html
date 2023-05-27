@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-12 col-lg-6">
         <mat-form-field class="form">
-          <mat-label>Saisir la succursale de prise en charge</mat-label>
+          <mat-label> Select one-way branch</mat-label>
           <mat-select [disabled]="!enableForm" formControlName="pickUpLocation">
             <mat-option
               *ngFor="let location of locations"
@@ -18,7 +18,7 @@
 
       <div class="col-12 col-md-6 col-lg-3 mb-4 mb-lg-0">
         <mat-form-field>
-          <mat-label>Choisissez une date</mat-label>
+          <mat-label>Choose a date</mat-label>
           <input
             matInput
             required
@@ -46,7 +46,7 @@
             class="form-control"
             placeholder="Heure"
           >
-            <option value="">Heure</option>
+            <option value="">Hour</option>
             <option *ngFor="let item of timeList" [value]="item">
               {{ item }}
             </option>
@@ -57,7 +57,7 @@
     <div class="row">
       <div class="col-12 col-lg-6">
         <mat-form-field>
-          <mat-label>Saisir la succursale de retour</mat-label>
+          <mat-label>Select branch back</mat-label>
           <mat-select [disabled]="!enableForm" formControlName="dropLocation">
             <mat-option
               *ngFor="let location of locations"
@@ -72,7 +72,7 @@
 
       <div class="col-12 col-md-6 col-lg-3 mb-4 mb-lg-0">
         <mat-form-field>
-          <mat-label>Choisissez une date</mat-label>
+          <mat-label>Choose a date</mat-label>
           <input
             matInput
             required
@@ -101,7 +101,7 @@
             class="form-control"
             placeholder="Heure"
           >
-            <option value="">Heure</option>
+            <option value="">Hour</option>
             <option *ngFor="let item of timeList" [value]="item">
               {{ item }}
             </option>
@@ -117,7 +117,7 @@
           class="btn btn-primary w-100"
           [disabled]="searchForm.invalid"
         >
-          Demandez un Devis
+          Request a Quote
         </button>
       </div>
     </div>
