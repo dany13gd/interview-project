@@ -8,78 +8,75 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent {
   constructor(private router: Router) {}
-  public mhImage: string =
-    'https://toura-croatie-cms-asset-upload.s3.eu-west-3.amazonaws.com/Croatie_Header_Pagespng_01_1fe81b2aa0.jpg';
-  public link: string = '/devis';
+  public mhImage: string = '../../../assets/images/home-masthead.jpg';
+  public link: string = '/benefits';
   public buttonText: string = 'book online';
-  public title: string =
-    'Agence de location de voiture au Mexique : TouraCancun ';
+  public title: string = 'Car rental agency in Mexico: TouraCancun';
   public content: string =
-    "Vous planifiez un voyage au Mexique? Si vous souhaitez tirer le meilleur de votre séjour à Cancun et ses environs, si vous souhaitez louer un véhicule est pratiquement un incontournable. Ainsi, vous pourrez vous déplacer aisément d'un site à un autre, à votre rythme. Pour vous permettre de vivre une expérience inoubliable au Mexique, TouraCancun vous propose un service de location de voiture qui vous évitera les mauvaises surprises et vous procurera la paix d'esprit.";
+    'Planning a trip to Mexico? If you want to make the most of your stay in Cancun and its surroundings, renting a vehicle is practically a must. This way, you can move easily from one site to another, at your own pace. To allow you to live an unforgettable experience in Mexico, TouraCancun offers you a car rental service that will avoid unpleasant surprises and give you peace of mind.';
   public content2: string =
-    "Pour vous permettre de vivre une expérience inoubliable au Mexique, TouraCancun vous propose un service de location de voiture qui vous évitera les mauvaises surprises et vous procurera la paix d'esprit.";
+    'To allow you to live an unforgettable experience in Mexico, TouraCancun offers you a car rental service that will avoid unpleasant surprises and give you peace of mind.';
   public firstSectionTitle: string =
-    'Un grand choix de voitures de location pour découvrir le Mexique en toute liberté';
+    'A large selection of rental cars to discover Mexico in complete freedom';
   public firstContent1: string =
-    'TouraCancun vous propose un large choix de modèles de véhicules, afin que vous puissiez baser votre choix en fonction de vos priorités (économie de carburant, espace cargo, etc.) ou des routes que vous arpenterez.';
+    'TouraCancun offers you a wide choice of vehicle models, so you can base your choice on your priorities (fuel economy, cargo space, etc.) or the roads you will be driving.';
   public firstContent2: string =
-    'Sachez que peu importe la voiture, véhicule tout-terrain ou fourgonnette pour lequel vous opterez, sa condition mécanique sera toujours impeccable, vous garantissant des déplacements sécuritaires et sans tracas.';
-  public firstUrl: string =
-    'https://touracancun.com/wp-content/uploads/2019/09/volkswagen-gol.jpg';
-  public firstHeight: string = '257';
-  public firstWidth: string = '313';
+    'Know that no matter which car, all-terrain vehicle or minivan you opt for, its mechanical condition will always be impeccable, guaranteeing you safe and hassle-free travel.';
+  public firstUrl: string = '../../../assets/images/volkswagen-gol.webp';
+  public Height: string = '257';
+  public Width: string = '313';
   public gridIcons: any[] = [
     {
-      title: 'Prix sans surprises',
+      title: 'Price without surprises',
       content:
-        'Louer sa voiture sur internet c’est la jungle. TouraCancun vous fournit un prix complet et sans surprises à votre arrivée.',
-      path: 'https://touracancun.com/wp-content/uploads/2019/09/devis-sans-surprises-1.png',
+        'Renting a car on the internet is the jungle. TouraCancun provides you with a full price and no surprises upon your arrival.',
+      path: '../../../assets/images/Price-without-surprises.webp',
     },
     {
-      title: 'Assurances incluses',
+      title: 'Insurance included',
       content:
-        'Nous sommes les seuls à inclure toutes les assurances et à vous donner les tarifs définitifs et non des appels d’offre.',
-      path: 'https://touracancun.com/wp-content/uploads/2019/09/assurances-incluses-1.png',
+        'We are the only ones to include all the insurances and to give you the final prices and not calls for tenders.',
+      path: '../../../assets/images/insurance-included.webp',
     },
     {
-      title: 'Zéro franchise pour toutes les locations',
+      title: 'Zero deductible for all rentals',
       content:
-        'Cette assurance élimine toute la responsabilité du véhicule et du conducteur en cas d’accident ou de vol. Élimine aussi tout paiement de la part du conducteur. Avec TouraCancun vous êtes assuré à 100%. Le Must des assurances !  ',
-      path: 'https://touracancun.com/wp-content/uploads/2019/09/sero-franchise.png',
+        'This insurance eliminates all liability of the vehicle and the driver in the event of an accident or theft. Also eliminates any payment from the driver. With TouraCancun you are 100% insured. The Must of insurance!',
+      path: '../../../assets/images/zero-deductible.webp',
     },
     {
-      title: 'Assurance anticorruption',
+      title: 'Anti-corruption insurance',
       content:
-        'Assurance spécifique où le touriste en détresse pourra appeler un de nos opérateurs 24/24, qui parlera à la police et grâce à nos contacts avec les autorités locales, vous aidera à repartir sans inconvénients.',
-      path: 'https://touracancun.com/wp-content/uploads/2019/09/passage-frontiere-1.png',
+        'Specific insurance where the tourist in distress can call one of our operators 24/24, who will speak to the police and thanks to our contacts with the local authorities, will help you to leave without inconvenience.',
+      path: '../../../assets/images/anti-corruption.webp',
     },
     {
-      title: 'Assistance francophone',
+      title: 'French-speaking support',
       content:
-        'La meilleure réactivité du marché. Assistance 24h/24h WhatsApp – Téléphone – Chat – Email. Réactivité et support unique au Mexique.',
-      path: 'https://touracancun.com/wp-content/uploads/2019/09/assistance-francophone-1.png',
+        'The best responsiveness on the market. 24/7 support WhatsApp – Phone – Chat – Email. Responsiveness and unique support in Mexico.',
+      path: '../../../assets/images/24hrs-support.webp',
     },
     {
-      title: 'Kilométrage illimité',
+      title: 'Unlimited mileage',
       content:
-        'Pour votre prochain road-trip au Mexique,  profitez du kilométrage illimité offert sur votre location de voiture pour aller encore plus loin avec TouraCancun.',
-      path: 'https://touracancun.com/wp-content/uploads/2019/11/km-illimite-1.png',
+        'For your next road trip in Mexico, take advantage of the unlimited mileage offered on your car rental to go even further with TouraCancun.',
+      path: '../../../assets/images/unlimited.webp',
     },
     {
-      title: 'Location sans carte bancaire',
+      title: 'Rental without credit card',
       content:
-        'Avec TouraCancun aucun besoin de communiquer votre numéro de CB. Louez directement en ligne sur notre site.',
-      path: 'https://touracancun.com/wp-content/uploads/2019/09/location-sans-carte-1.png',
+        'With TouraCancun no need to communicate your credit card number. Rent directly online on our site.',
+      path: '../../../assets/images/without-credit-card.webp',
     },
     {
-      title: '2ème conducteur gratuit',
+      title: '2nd driver free',
       content:
-        'Toujours plus d’économies avec TouraCancun. Nous sommes les seuls au Mexique à offrir à nos clients cette prestation.',
-      path: 'https://touracancun.com/wp-content/uploads/2019/12/2019-11-26.png',
+        'Always more savings with TouraCancun. We are the only ones in Mexico to offer our customers this service.',
+      path: '../../../assets/images/2nd-driver-free.png',
     },
   ];
 
   public gotoVechicleList(): void {
-    this.router.navigate(['/vehicules']);
+    this.router.navigate(['/car-list']);
   }
 }

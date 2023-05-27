@@ -19,7 +19,7 @@ export class FooterComponent {
     },
     {
       title: 'Insurance',
-      path: '/insurance',
+      path: '/insurances',
     },
 
     {
