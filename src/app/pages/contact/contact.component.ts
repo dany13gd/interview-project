@@ -1,7 +1,11 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import {
+  FormBuilder,
+  FormGroup,
+  ValidationErrors,
+  Validators,
+} from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { EmailValidator } from 'src/app/core/validators/email-validators';
 
 @Component({
   selector: 'app-contact',
@@ -9,30 +13,52 @@ import { EmailValidator } from 'src/app/core/validators/email-validators';
   styleUrls: ['./contact.component.scss'],
 })
 export class ContactComponent {
-  constructor(private snackBar: MatSnackBar) {}
+  constructor(private snackBar: MatSnackBar, private fb: FormBuilder) {
+    this.createForm();
+  }
 
   public mhTitle: string = 'Contact';
   public bgImage: string = '../../../assets/images/mhContact-image.jpg';
   public image: string = '../../../assets/images/contact-image.jpg';
   public width: string = '790';
   public height: string = '790';
+  public contactInformation: any = {};
 
-  public contactForm = new FormGroup({
-    name: new FormControl('', [Validators.required]),
-    email: new FormControl('', [Validators.required, Validators.email]),
-    confirmEmail: new FormControl('', [
-      Validators.required,
-      Validators.email,
-      // EmailValidator('email'),
-    ]),
-    message: new FormControl('', [Validators.required]),
-  });
+  public contactForm = new FormGroup({});
+
+  createForm() {
+    this.contactForm = this.fb.group(
+      {
+        name: ['', Validators.required],
+        email: ['', [Validators.required, Validators.email]],
+        confirmEmail: ['', [Validators.required, Validators.email]],
+        message: ['', Validators.required],
+      },
+      {
+        validators: this.emailConfirmationValidator.bind(this),
+      }
+    );
+  }
+
+  emailConfirmationValidator(form: FormGroup): ValidationErrors | null {
+    const email = form.get('email')?.value;
+    const confirmEmail = form.get('confirmEmail')?.value;
+
+    return email === confirmEmail
+      ? null
+      : this.snackBar.open('different emails, plese check', 'close');
+  }
+
   public showErrorMessage = false;
+
   public submitForm(): void {
     if (this.contactForm.invalid) {
       this.showErrorMessage = false;
       return;
     } else {
+      this.contactInformation = this.contactForm.value;
+      console.log(this.contactInformation);
+
       this.snackBar.open('Email Sent successfully', 'close');
     }
   }
