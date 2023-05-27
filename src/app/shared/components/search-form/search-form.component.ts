@@ -2,6 +2,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Location } from '../../models/location';
 import { DateTimeService } from 'src/app/core/data-services/date-time.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-search-form',
@@ -9,7 +10,10 @@ import { DateTimeService } from 'src/app/core/data-services/date-time.service';
   styleUrls: ['./search-form.component.scss'],
 })
 export class SearchFormComponent implements OnInit {
-  constructor(private dateTimeService: DateTimeService) {}
+  constructor(
+    private dateTimeService: DateTimeService,
+    private snackBar: MatSnackBar
+  ) {}
 
   ngOnInit(): void {
     this.timeList = this.dateTimeService.getTimesList();
@@ -23,6 +27,8 @@ export class SearchFormComponent implements OnInit {
     dropTime: new FormControl('', [Validators.required]),
   });
 
+  public contactInformation: any = {};
+  public showErrorMessage = false;
   public timeList: string[] = [];
   public enableForm = false;
   public activeSpinner: boolean = false;
@@ -54,8 +60,13 @@ export class SearchFormComponent implements OnInit {
   ];
 
   public submitForm(): void {
-    if (!this.searchForm.valid) {
+    if (this.searchForm.invalid) {
+      this.showErrorMessage = false;
       return;
+    } else {
+      this.contactInformation = this.searchForm.value;
+      console.log(this.contactInformation);
+      this.snackBar.open('Successful request', 'close');
     }
   }
 }
