@@ -70,11 +70,11 @@ export class SearchFormComponent implements OnInit {
       this.showErrorMessage = false;
       return;
     } else {
-      this.snackBar.open('Successful request', 'close');
       const searchParams = Object.assign(this.searchForm.value);
       this.utilsService.storageSet('searchParams', searchParams);
       this.activeSpinner = true;
       setTimeout(() => {
+        this.snackBar.open('Successful request', 'close');
         this.activeSpinner = false;
         this.searchResultsSaved.emit(searchParams);
         this.router.navigate(['/reserve']);

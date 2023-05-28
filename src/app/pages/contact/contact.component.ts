@@ -19,7 +19,7 @@ export class ContactComponent {
 
   public showErrorMessage = false;
   public mhTitle: string = 'Contact';
-  public bgImage: string = '../../../assets/images/mhContact-image.jpg';
+  public bgImage: string = '../../../assets/images/masthead-contact.webp';
   public image: string = '../../../assets/images/contact-image.jpg';
   public width: string = '790';
   public height: string = '790';
