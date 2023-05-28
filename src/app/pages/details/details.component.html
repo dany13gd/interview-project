@@ -1,69 +1,71 @@
-<div class="container mb-4">
-  <div class="row">
-    <div class="col-12 main-title mb-2">Voiture Sélectionnée</div>
-    <div class="col-12 col-md-3 mb-3">
-      <a
-        routerLink="/benefits"
-        target="_blank"
-        class="btn btn-custom btn-outline btn-small w-100 d-block mb-2 mb-md-0"
-        >Voir Toutes les Assurances</a
-      >
+<section class="bg-color-odd py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 main-title">Voiture Sélectionnée</div>
+      <div class="col-12 col-md-3 mb-3">
+        <a
+          routerLink="/benefits"
+          target="_blank"
+          class="btn btn-custom btn-outline btn-small w-100 d-block mb-3 mb-md-0"
+          >Voir Toutes les Assurances</a
+        >
+      </div>
     </div>
-  </div>
 
-  <div class="row bordered">
-    <div class="col-12 col-md-8 border-right">
-      <div class="row">
-        <div class="col-12">
-          <h4 class="secondary-title bold mt-3">Options supplémentaires</h4>
-          <div
-            class="row border-bottom pb-1 align-items-center"
-            *ngFor="let extra of extras"
-          >
-            <div class="col-6 col-md-8">
-              {{ extra.name }}
-            </div>
-            <div class="col-3 col-md-4 text-end bold font-mid">
-              <div class="row">
-                <div class="col-6">
-                  <input
-                    class="mx-3"
-                    (change)="toggleSelectExtra(extra)"
-                    type="checkbox"
-                    [checked]="extra.checked"
-                  />
-                </div>
-                <div class="col-6 text-center">
-                  {{ extra.amount || 0 | currency : "EUR" }}
+    <div class="row bordered">
+      <div class="col-12 col-md-8 border-right">
+        <div class="row">
+          <div class="col-12">
+            <h4 class="secondary-title bold mt-3">Options supplémentaires</h4>
+            <div
+              class="row border-bottom pb-1 align-items-center"
+              *ngFor="let extra of extras"
+            >
+              <div class="col-6 col-md-8">
+                {{ extra.name }}
+              </div>
+              <div class="col-3 col-md-4 text-end bold font-mid">
+                <div class="row">
+                  <div class="col-6">
+                    <input
+                      class="mx-3"
+                      (change)="toggleSelectExtra(extra)"
+                      type="checkbox"
+                      [checked]="extra.checked"
+                    />
+                  </div>
+                  <div class="col-6 text-center">
+                    {{ extra.amount || 0 | currency : "EUR" }}
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="col-12 col-md-4 pt-5 pb-4">
-      <img
-        loading="lazy"
-        [src]="items.CarModelImageURL"
-        [alt]="items.ModelName"
-        class="img-fluid"
-      />
-      <h4 class="secondary-title title-large bold">{{ items.ModelName }}</h4>
-      <span class="badge">{{ items.CarTransmissionType }}</span>
-      <p class="font-large mt-2">
-        Prix {{ items.Amount | currency : "EUR" }}
-        <small>
-          {{ items.Amount / items.DaysForPayment | currency : "EUR" }} /
-          jour</small
+      <div class="col-12 col-md-4 pt-5 pb-4">
+        <img
+          loading="lazy"
+          [src]="items.CarModelImageURL"
+          [alt]="items.ModelName"
+          class="img-fluid"
+        />
+        <h4 class="secondary-title title-large bold">{{ items.ModelName }}</h4>
+        <span class="badge">{{ items.CarTransmissionType }}</span>
+        <p class="font-large mt-2">
+          Prix {{ items.Amount | currency : "EUR" }}
+          <small>
+            {{ items.Amount / items.DaysForPayment | currency : "EUR" }} /
+            jour</small
+          >
+        </p>
+        <button
+          (click)="goToFinalStep()"
+          class="btn btn-custom btn-secondary btn-small w-100"
         >
-      </p>
-      <button
-        (click)="goToFinalStep()"
-        class="btn btn-custom btn-secondary btn-small w-100"
-      >
-        Devis Final
-      </button>
+          Devis Final
+        </button>
+      </div>
     </div>
   </div>
-</div>
+</section>

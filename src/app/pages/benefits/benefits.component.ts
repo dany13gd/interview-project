@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./benefits.component.scss'],
 })
 export class BenefitsComponent {
-  public link: string = '/devis';
+  public link: string = '/reserve';
   public buttonText: string = 'book online';
   public bgImage: string = '../../../assets/images/masthead-benefits.webp';
   public mhTitle: string = 'Benefits';
