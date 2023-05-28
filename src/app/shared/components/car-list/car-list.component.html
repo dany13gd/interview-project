@@ -2,91 +2,93 @@
   <div class="row">
     <h2 class="main-title col-12 mb-1">Résultats de la recherche</h2>
   </div>
-  <ng-container>
-    <div *ngFor="let item of list" class="row car-item">
-      <div class="col-6 col-md-4 border-right">
-        <h3 class="secondary-title title-large mt-3">
-          {{ item.ModelName }} - {{ item.CarTransmissionType }}
-        </h3>
-        <img
-          loading="lazy"
-          [src]="item.CarModelImageURL"
-          [alt]="item.ModelName"
-          class="img-fluid"
-        />
-        <p class="font-large mt-3">
-          Prix {{ item.Amount | currency : "EUR" }}
-          <small
-            >{{ item.Amount / item.DaysForPayment | currency : "EUR" }} /
-            jour</small
-          >
-        </p>
-      </div>
-      <div class="col-6 col-md-8">
-        <div class="row pt-2 pb-2 mb-2 border-bottom justify-content-around">
-          <div class="col-md-6 col-12">
-            <a
-              routerLink="/benefits"
-              target="_blank"
-              class="btn btn-custom btn-outline btn-small w-100 d-block mb-2 mb-md-0"
-              >Voir Toutes les Assurances</a
+  <div *ngIf="list">
+    <ng-container>
+      <div *ngFor="let item of list" class="row car-item">
+        <div class="col-6 col-md-4 border-right">
+          <h3 class="secondary-title title-large mt-3">
+            {{ item.ModelName }} - {{ item.CarTransmissionType }}
+          </h3>
+          <img
+            loading="lazy"
+            [src]="item.CarModelImageURL"
+            [alt]="item.ModelName"
+            class="img-fluid"
+          />
+          <p class="font-large mt-3">
+            Prix {{ item.Amount | currency : "EUR" }}
+            <small
+              >{{ item.Amount / item.DaysForPayment | currency : "EUR" }} /
+              jour</small
             >
-          </div>
-          <div class="col-md-3 col-12">
-            <button
-              class="btn btn-custom btn-primary btn-small w-100"
-              (click)="selectCar(item)"
-            >
-              Choisir
-            </button>
-          </div>
-          <!-- <div class="col-md-3 col-12">
-            <a
-              class="btn btn-custom btn-secondary btn-small w-100"
-              href="/devis-complet"
-              target="_blank"
-              >Voir l'offre</a
-            >
-          </div> -->
+          </p>
         </div>
-        <div class="row">
-          <h4 class="col-12 secondary-title">Inclus</h4>
-          <div class="col-md-3 col-6">
-            <ul class="list-unstyled">
-              <li>Boîte de vitesses: {{ item.CarTransmissionType }}</li>
-              <li>Max passagers: {{ item.PassengerCapacity }}</li>
-              <li>
-                {{ item.BigBagsCapacity + item.SmallBagsCapacity }} Valises
-              </li>
-              <li>Annulation Gratuite</li>
-            </ul>
+        <div class="col-6 col-md-8">
+          <div class="row pt-2 pb-2 mb-2 border-bottom justify-content-around">
+            <div class="col-md-6 col-12">
+              <a
+                routerLink="/benefits"
+                target="_blank"
+                class="btn btn-custom btn-outline btn-small w-100 d-block mb-2 mb-md-0"
+                >Voir Toutes les Assurances</a
+              >
+            </div>
+            <div class="col-md-3 col-12">
+              <button
+                class="btn btn-custom btn-primary btn-small w-100"
+                (click)="selectCar(item)"
+              >
+                Choisir
+              </button>
+            </div>
+            <!-- <div class="col-md-3 col-12">
+              <a
+                class="btn btn-custom btn-secondary btn-small w-100"
+                href="/devis-complet"
+                target="_blank"
+                >Voir l'offre</a
+              >
+            </div> -->
           </div>
-          <div class="col-md-3 col-6">
-            <ul class="list-unstyled">
-              <li>Bas de Caisse</li>
-              <li>Climatisation</li>
-              <li>Jantes et Pneumatiques</li>
-              <li>Paiement sur Place</li>
-            </ul>
-          </div>
-          <div class="col-md-3 col-6">
-            <ul class="list-unstyled">
-              <li>Réservation sans C.B</li>
-              <li>AM/FM avec CD</li>
-              <li>Bris de Glace</li>
-              <li>Dessous du Véhicule</li>
-            </ul>
-          </div>
-          <div class="col-md-3 col-6">
-            <ul class="list-unstyled">
-              <li>Kilométrage Illimité</li>
-              <li>Passage Frontières</li>
-              <li>Support Français 24/7</li>
-              <li>Zéro Franchise</li>
-            </ul>
+          <div class="row">
+            <h4 class="col-12 secondary-title">Inclus</h4>
+            <div class="col-md-3 col-6">
+              <ul class="list-unstyled">
+                <li>Boîte de vitesses: {{ item.CarTransmissionType }}</li>
+                <li>Max passagers: {{ item.PassengerCapacity }}</li>
+                <li>
+                  {{ item.BigBagsCapacity + item.SmallBagsCapacity }} Valises
+                </li>
+                <li>Annulation Gratuite</li>
+              </ul>
+            </div>
+            <div class="col-md-3 col-6">
+              <ul class="list-unstyled">
+                <li>Bas de Caisse</li>
+                <li>Climatisation</li>
+                <li>Jantes et Pneumatiques</li>
+                <li>Paiement sur Place</li>
+              </ul>
+            </div>
+            <div class="col-md-3 col-6">
+              <ul class="list-unstyled">
+                <li>Réservation sans C.B</li>
+                <li>AM/FM avec CD</li>
+                <li>Bris de Glace</li>
+                <li>Dessous du Véhicule</li>
+              </ul>
+            </div>
+            <div class="col-md-3 col-6">
+              <ul class="list-unstyled">
+                <li>Kilométrage Illimité</li>
+                <li>Passage Frontières</li>
+                <li>Support Français 24/7</li>
+                <li>Zéro Franchise</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </ng-container>
+    </ng-container>
+  </div>
 </div>
