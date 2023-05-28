@@ -14,6 +14,7 @@ import {
 } from '@angular/material/snack-bar';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ReserveComponent } from './reserve/reserve.component';
+import { DetailsComponent } from './details/details.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { ReserveComponent } from './reserve/reserve.component';
     InsurancesComponent,
     ContactComponent,
     ReserveComponent,
+    DetailsComponent,
   ],
   imports: [
     CommonModule,

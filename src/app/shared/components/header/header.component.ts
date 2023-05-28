@@ -23,10 +23,13 @@ export class HeaderComponent {
       title: 'Insurance',
       path: '/insurances',
     },
-
     {
       title: 'Contact',
       path: '/contact',
+    },
+    {
+      title: 'Reserve',
+      path: '/reserve',
     },
   ];
   public toggleNav(): void {

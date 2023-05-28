@@ -9,9 +9,13 @@
         [topSpacing]="false"
         [defaultValues]="true"
         [dataSearch]="dataSearch"
+        (searchResultsSaved)="loadCarlist()"
       >
       </app-search-form>
     </div>
   </div>
 </app-masthead>
 <app-car-list [list]="carList"></app-car-list>
+<div *ngIf="!carList">
+  <app-details [items]="carList"></app-details>
+</div>

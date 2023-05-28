@@ -50,6 +50,7 @@ export class SearchFormComponent implements OnInit {
     dropDate: '',
     dropTime: '',
   };
+  @Output() searchResultsSaved: EventEmitter<Car[]> = new EventEmitter<Car[]>();
 
   public locations: Location[] = [
     { Id: '0', Name: 'Airport de Cancun' },
@@ -69,15 +70,13 @@ export class SearchFormComponent implements OnInit {
       this.showErrorMessage = false;
       return;
     } else {
-      this.contactInformation = this.searchForm.value;
-      console.log(this.contactInformation);
       this.snackBar.open('Successful request', 'close');
       const searchParams = Object.assign(this.searchForm.value);
-
       this.utilsService.storageSet('searchParams', searchParams);
       this.activeSpinner = true;
       setTimeout(() => {
         this.activeSpinner = false;
+        this.searchResultsSaved.emit(searchParams);
         this.router.navigate(['/reserve']);
       }, 3000);
     }
