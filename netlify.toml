@@ -1,0 +1,7 @@
+[build]
+  publish = "dist/interview-project"
+  command = "npm run netlify-build"
+[[redirects]]
+  from="/*"
+  to="/index.html"
+  status=200
