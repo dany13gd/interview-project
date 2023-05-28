@@ -31,6 +31,7 @@ import {
 import { SearchFormComponent } from './components/search-form/search-form.component';
 import { AccordionComponent } from './components/accordion/accordion.component';
 import { ContactEmailComponent } from './components/contact-email/contact-email.component';
+import { CarListComponent } from './components/car-list/car-list.component';
 const icons = {
   geoAltFill,
   calendar3,
@@ -54,6 +55,7 @@ const icons = {
     SearchFormComponent,
     AccordionComponent,
     ContactEmailComponent,
+    CarListComponent,
   ],
   imports: [
     CommonModule,
@@ -78,6 +80,7 @@ const icons = {
     SearchFormComponent,
     AccordionComponent,
     ContactEmailComponent,
+    CarListComponent,
   ],
 })
 export class SharedModule {}
