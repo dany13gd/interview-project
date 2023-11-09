@@ -11,7 +11,7 @@ export class FooterComponent {
   public menuItems: any[] = [
     {
       title: 'Prices',
-      path: '/Prices',
+      path: '/prices',
     },
     {
       title: 'Benefits',

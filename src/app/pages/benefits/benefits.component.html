@@ -21,6 +21,7 @@
             loading="lazy"
             class="img-fluid"
             [src]="item.path"
+            alt="icon"
             width="149"
             height="130"
           />
@@ -40,7 +41,7 @@
     >
       <div class="card-custom">
         <figure class="d-flex justify-content-center">
-          <img loading="lazy" class="img-fluid" [src]="item.path" />
+          <img loading="lazy" class="img-fluid" [src]="item.path" alt="icon" />
         </figure>
         <figcaption class="d-flex justify-content-center">
           {{ item.title }}
