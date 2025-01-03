@@ -15,4 +15,24 @@
   <body class="mat-typography">
     <app-root></app-root>
   </body>
+  <script>
+    window.addEventListener("message", (event) => {
+      // Asegúrate de validar el origen para evitar recibir mensajes de orígenes no deseados
+      if (event.origin !== "http://localhost:4200") {
+        return; // Puedes reemplazar esta URL con el dominio real de tu aplicación
+      }
+
+      // Obtener los datos del mensaje
+      const data = event.data;
+
+      // Verificar que el tipo de mensaje es el esperado
+      if (data.type === "loadStyles") {
+        // Crear el elemento <link> para cargar los estilos
+        const link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.href = data.url; // URL recibida en el mensaje
+        document.head.appendChild(link); // Agregar el link a la cabeza del iframe
+      }
+    });
+  </script>
 </html>
