@@ -5,7 +5,6 @@
   from="/*"
   to="/index.html"
   status=200
-
 [[headers]]
   for = "/*"
   [headers.values]
@@ -15,4 +14,5 @@
     Content-Security-Policy = "default-src *; img-src *; script-src * 'unsafe-inline' 'unsafe-eval'; style-src * 'unsafe-inline'; font-src *; object-src *; connect-src *; frame-src *;"
     Referrer-Policy = "no-referrer-when-downgrade"
     Permissions-Policy = "geolocation=(self), microphone=(), camera=()"
+
 
