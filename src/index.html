@@ -18,6 +18,8 @@
   <script>
     window.addEventListener("message", (event) => {
       // Asegúrate de validar el origen para evitar recibir mensajes de orígenes no deseados
+      console.log(event);
+
       if (event.origin !== "http://localhost:4200") {
         return; // Puedes reemplazar esta URL con el dominio real de tu aplicación
       }
@@ -27,8 +29,12 @@
 
       // Verificar que el tipo de mensaje es el esperado
       if (data.type === "loadStyles") {
+        console.log("Cargando estilos...", data.url);
+
         // Crear el elemento <link> para cargar los estilos
         const link = document.createElement("link");
+        console.log(link);
+
         link.rel = "stylesheet";
         link.href = data.url; // URL recibida en el mensaje
         document.head.appendChild(link); // Agregar el link a la cabeza del iframe
