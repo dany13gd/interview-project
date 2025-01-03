@@ -5,3 +5,14 @@
   from="/*"
   to="/index.html"
   status=200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
+    X-Frame-Options = "ALLOWALL"  # Permite iframes de todos los orígenes
+    X-Content-Type-Options = "nosniff"
+    Content-Security-Policy = "default-src *; img-src *; script-src * 'unsafe-inline' 'unsafe-eval'; style-src * 'unsafe-inline'; font-src *; object-src *; connect-src *; frame-src *;"
+    Referrer-Policy = "no-referrer-when-downgrade"
+    Permissions-Policy = "geolocation=(self), microphone=(), camera=()"
+
