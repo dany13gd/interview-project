@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { environment } from '../../../../environments/environment';
 
 @Component({
   selector: 'app-footer',
@@ -8,6 +9,8 @@ import { Component } from '@angular/core';
 export class FooterComponent {
   public logoImage: string =
     'https://touraislande.com/wp-content/uploads/2019/09/TouraEuro-Logo-e1501914199940-blanc.png';
+  public version = environment.version;
+  public appName = environment.appName;
   public menuItems: any[] = [
     {
       title: 'Prices',
